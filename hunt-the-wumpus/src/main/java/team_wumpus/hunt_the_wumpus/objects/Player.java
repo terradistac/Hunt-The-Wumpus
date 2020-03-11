@@ -23,26 +23,7 @@ public class Player implements Moveable {
 		this.y = y;
 	}
 
-	public void move(Direction direction) {
-		switch(direction) {
-		  case NORTH:
-			  this.move(x, y+1);
-			  break;
-		  case EAST:
-			  this.move(x+1, y);
-			  break;
-		  case SOUTH:
-			  this.move(x, y-1);
-			  break;
-		  case WEST:
-			  this.move(x-1, y);
-			  break;
-		}
-	}
+	public void rest() {
 		
-	private void move(int x, int y) {
-		this.setX(x);
-		this.setY(y);
-	}
-
+	}	
 }

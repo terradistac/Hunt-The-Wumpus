@@ -1,5 +1,7 @@
 package team_wumpus.hunt_the_wumpus.objects;
 
+import team_wumpus.hunt_the_wumpus.Direction;
+
 public class Wumpus implements Moveable {
 	
 	private int x;
@@ -20,5 +22,4 @@ public class Wumpus implements Moveable {
 	public void setY(int y) {
 		this.y = y;
 	}
-
 }
