@@ -28,8 +28,32 @@ public class GameMap {
 		player.setX(x);
 		player.setY(y);		
 	}
-
+	
 	public void openCavern(int x, int y) {
 		map[x][y] = new Cavern();	
+	}
+
+	public int getWidth() {
+		return width;
+	}
+
+	public void setWidth(int width) {
+		this.width = width;
+	}
+
+	public int getHeight() {
+		return height;
+	}
+
+	public void setHeight(int height) {
+		this.height = height;
+	}
+
+	public Containable[][] getMap() {
+		return map;
+	}
+
+	public void setMap(Containable[][] map) {
+		this.map = map;
 	}
 }

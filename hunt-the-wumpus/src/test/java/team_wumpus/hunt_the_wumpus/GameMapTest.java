@@ -38,4 +38,14 @@ public class GameMapTest {
 		
 	}
 
+	@Test
+	public void movePlayerOutsideGrid() throws Exception {
+		Player player = new Player();
+		GameMap map = new GameMap(2,2);
+		map.openCavern(0, 1);
+		map.put(player, 0, 1);
+		player.move(Direction.NORTH);
+		assertEquals(0, player.getX());
+		assertEquals(1, player.getY());
+	}
 }
