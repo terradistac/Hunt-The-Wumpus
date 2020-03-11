@@ -73,15 +73,6 @@ public class PlayerTest {
 		assertEquals(0, player.getY());
 	}
 	
-	@Test
-	public void movePlayerOutsideGrid() throws Exception {
-		Player player = new Player();
-		GameMap map = new GameMap(2,2);
-		map.openCavern(0, 0);
-		map.put(player, 0, 0);
-		player.move(Direction.NORTH);
-	}
-	
 //	@Test
 //	public void movePlayerToClosedSquare() throws Execption() {
 //		
