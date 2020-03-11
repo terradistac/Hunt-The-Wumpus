@@ -31,6 +31,11 @@ public class PlayerTest {
 		map.openCavern(0, 0);
 		map.openCavern(1, 0);
 		map.put(player, 0, 0);
-
+		player.move(Direction.EAST);
+		assertEquals(1, player.getX());
+		assertEquals(0, player.getY());
+		player.move(Direction.WEST);
+		assertEquals(0, player.getX());
+		assertEquals(0, player.getY());
 	}
 }
