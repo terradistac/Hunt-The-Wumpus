@@ -2,12 +2,13 @@ package team_wumpus.hunt_the_wumpus;
 
 import team_wumpus.hunt_the_wumpus.objects.Cavern;
 import team_wumpus.hunt_the_wumpus.objects.Containable;
+import team_wumpus.hunt_the_wumpus.objects.Player;
 
 public class GameMap {
 	private int width;
 	private int height;
 	
-	Containable[][] map;
+	private Containable[][] map;
 	
 	public GameMap(int width, int height) {
 		this.width = width;
@@ -19,10 +20,16 @@ public class GameMap {
 	public Containable get(int x, int y) {
 		return map[x][y];	
 	}
+	
+	public void put(Player player, int x, int y) throws Exception {
+		if (map[x][y] == null) {
+			throw new Exception();
+		}
+		player.setX(x);
+		player.setY(y);		
+	}
 
 	public void openCavern(int x, int y) {
 		map[x][y] = new Cavern();	
 	}
-	
-	
 }
