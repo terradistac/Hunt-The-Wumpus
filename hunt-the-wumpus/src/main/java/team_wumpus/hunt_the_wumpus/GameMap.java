@@ -13,15 +13,16 @@ public class GameMap {
 		this.width = width;
 		this.height = height;
 		
-		map = new Containable[width][height];
-		for(int i = 0; i < width; i++) {
-			for(int j = 0; j < height; j++) {
-				map[i][j] = new Cavern();		
-			}
-		}		
+		map = new Containable[width][height];	
 	}
 
 	public Containable get(int x, int y) {
 		return map[x][y];	
 	}
+
+	public void openCavern(int x, int y) {
+		map[x][y] = new Cavern();	
+	}
+	
+	
 }
